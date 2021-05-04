@@ -1,3 +1,4 @@
+BYE
 <?php
 require_once '/xampp/htdocs/sdw/BusinessLayer/goodsController/goodsController.php';
 
