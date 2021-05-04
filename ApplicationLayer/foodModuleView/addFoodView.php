@@ -1,4 +1,4 @@
-Try again
+
 <?php
 require_once '/xampp/htdocs/sdw/BusinessLayer/foodController/foodController.php';
 
