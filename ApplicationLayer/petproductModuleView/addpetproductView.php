@@ -188,6 +188,8 @@ if(isset($_POST['add'])){
   <script>
   $(document).ready(function () {
     $('#petproductTable').DataTable();
+    //hiii
+
   } );
 </script>
 
