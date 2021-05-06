@@ -2,7 +2,6 @@
 require_once 'configAPI.php';
 
 session_start();
-echo $_SESSION['total'];
 if (!empty($_SESSION['total'])) {
 
     try {
@@ -15,10 +14,7 @@ if (!empty($_SESSION['total'])) {
 
         if ($response->isRedirect()) {
             $response->redirect(); // this will automatically forward the customer
-            // unset($_SESSION['quantity']);
-            // unset($_SESSION['ProductID']);
-            // unset($_SESSION['OrderAddress']);
-            unset($_SESSION['total']);
+          
             
         } else {
             // not successful
