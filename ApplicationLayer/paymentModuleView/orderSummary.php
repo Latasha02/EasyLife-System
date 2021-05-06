@@ -5,6 +5,17 @@
 
  $payment = new paymentController();
  $data = $payment->viewDetails();
+ session_start();
+ if(isset($_POST['add'])){
+  $payment = $_POST['paymentMethod'];
+  
+  $_SESSION['item_name'] = $_POST['item_name'];
+  $_SESSION['item_number'] = $_POST['item_number'];
+  $_SESSION['total'] = $_POST['amount'] + 4.5;
+  if($payment == 'paypal'){
+        header("Location: ../../libs/paypal/charge.php");
+    }
+ }
 
 ?>
 
@@ -140,9 +151,9 @@
         ?>
         <tr>
         <!--Paypal payment form for displaying the buy button-->
-        <form action="<?php echo PAYPAL-URL; ?>" method="post">
+        <!-- <form action="<?php echo PAYPAL-URL; ?>" method="post"> -->
         <!--Identify your business so that you can collect the payment-->
-        <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">
+        <!-- <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>"> -->
 
         <!--Specify a buy now button -->
         <input type="hidden" name="cmd" value="_xclick">
@@ -151,22 +162,22 @@
         <input type="hidden" name="item_name" value="<?php echo $row['productName']; ?>">
         <input type="hidden" name="item_number" value="<?php echo $row['cartID']; ?>">
         <input type="hidden" name="amount" value="<?php echo $row['productPrice']; ?>">
-        <input type="hidden" name="currency_code" value="<?php echo PAYPAL_CURRENCY; ?>">
+        <!-- <input type="hidden" name="currency_code" value="<?php echo PAYPAL_CURRENCY; ?>"> -->
 
         <!--specify URLs -->
-        <input type="hidden" name="return" value="<?php echo PAYPAL_RETURN_URL; ?>">
-        <input type="hidden" name="cancel_return" value="<?php echo PAYPAL_CANCEL_URL; ?>">
+        <!-- <input type="hidden" name="return" value="<?php echo PAYPAL_RETURN_URL; ?>">
+        <input type="hidden" name="cancel_return" value="<?php echo PAYPAL_CANCEL_URL; ?>"> -->
         
 
         <!--Display the payment button--> 
-        <td><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></td>
+        <td><button name="add" class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button><input type="hidden" name="paymentMethod" value="paypal"></td>
+        <!-- <td><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></td> -->
         </form>
         </tr>
         
             </div>
        
-    </form>
         </tbody>
     
         </table>
