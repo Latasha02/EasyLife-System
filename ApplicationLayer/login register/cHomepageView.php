@@ -4,8 +4,9 @@
 		session_destroy();
 		unset($_SESSION['customerEmail']);
 		header('location:loginView.php');
-
 	}
+  session_start();
+  $customerID=$_GET["customerID"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
