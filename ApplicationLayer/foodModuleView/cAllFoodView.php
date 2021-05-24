@@ -3,7 +3,9 @@ require_once '/xampp/htdocs/sdw/BusinessLayer/foodController/foodController.php'
 
 $product = new foodController();
 $data = $product->viewAllFood();
-$customerID = $_GET['customerID'];
+
+session_start();
+$customerID = $_SESSION['customerID'];
 
 if(isset($_POST['delete'])){
     $food->delete();
