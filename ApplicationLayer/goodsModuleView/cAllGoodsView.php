@@ -3,7 +3,9 @@ require_once '/xampp/htdocs/sdw/BusinessLayer/goodsController/goodsController.ph
 
 $product = new goodsController();
 $data = $product->viewAllProduct();
-$customerID = $_GET['customerID'];
+
+session_start();
+$customerID = $_SESSION['customerID'];
 
 if(isset($_POST['delete'])){
     $product->delete();
