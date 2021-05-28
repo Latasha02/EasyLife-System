@@ -19,8 +19,10 @@ function connect()
     }
 
     function cartView(){
-        $sql = "select * from cart";
-        return DB::run($sql);
+        $sql = "select * from cart where customerID=:customerID";
+        $args = [':customerID'=>$this->customerID];
+        $stmt = DB::run($sql, $args);
+        return $stmt;
     }
 
     function deleteProduct(){

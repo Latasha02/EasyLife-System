@@ -6,7 +6,7 @@ session_start();
 $customerID = $_SESSION['customerID'];
 
 $product = new orderController();
-$data = $product->viewCart();
+$data = $product->viewCart($customerID);
 
 if(isset($_POST['updateCart'])){
   $price=$_POST['productPrice'];

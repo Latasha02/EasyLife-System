@@ -17,8 +17,9 @@ function update($productTotalPrice){
         }
     }
 
-function viewCart(){
+function viewCart($customerID){
         $product = new orderModel();
+        $product->customerID = $customerID;
         return $product->cartView();
     }
 
