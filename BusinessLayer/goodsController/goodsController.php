@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 require_once '\xampp\htdocs\SEM-group-5\BusinessLayer\goodsModel\goodsModel.php';
+=======
+require_once 'xampp\htdocs\sdw\BusinessLayer\goodsModel\goodsModel.php';
+>>>>>>> 1c64cfdb45d3375a83dba5334a26a61aa6af3eae
 
 class goodsController{
 

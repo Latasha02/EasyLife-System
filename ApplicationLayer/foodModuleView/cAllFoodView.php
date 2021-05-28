@@ -1,11 +1,10 @@
 <?php
-require_once '/xampp/htdocs/sdw/BusinessLayer/foodController/foodController.php';
-
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/foodController/foodController.php';
+session_start();
+$customerID = $_SESSION['customerID'];
 $product = new foodController();
 $data = $product->viewAllFood();
 
-session_start();
-$customerID = $_SESSION['customerID'];
 
 if(isset($_POST['delete'])){
     $food->delete();
@@ -60,7 +59,7 @@ if (isset($_POST['addToCart'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Customer</a>   
+            <a class="nav-link" href="#"><?php echo $customerID?> Customer</a>   
           </li>    
           <li class="nav-item">
             <a class="nav-link" href="../login register/loginView.php">Logout</a>      
