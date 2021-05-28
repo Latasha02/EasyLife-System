@@ -1,5 +1,5 @@
 <?php
-require_once '/xampp/htdocs/sdw/BusinessLayer/goodsController/goodsController.php';
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/goodsController/goodsController.php';
 session_start();
 
 $product = new goodsController();

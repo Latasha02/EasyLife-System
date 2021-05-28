@@ -1,5 +1,5 @@
 <?php
-require_once '/xampp/htdocs/sdw/BusinessLayer/foodController/foodController.php';
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/foodController/foodController.php';
 
 $food = new foodController();
 $data = $food->viewAll();

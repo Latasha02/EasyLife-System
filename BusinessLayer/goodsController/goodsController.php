@@ -1,5 +1,5 @@
 <?php
-require_once '\xampp\htdocs\sdw\BusinessLayer\goodsModel\goodsModel.php';
+require_once 'xampp\htdocs\sdw\BusinessLayer\goodsModel\goodsModel.php';
 
 class goodsController{
 
