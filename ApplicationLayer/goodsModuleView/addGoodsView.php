@@ -18,10 +18,10 @@ if(isset($_POST['add'])){
         <meta name="author" content="">
   
   <!-- Bootstrap core CSS -->
-  <link href="/sdw/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/SEM-group-5/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/sdw/css/shop-homepage.css" rel="stylesheet">
+  <link href="/SEM-group-5/css/shop-homepage.css" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
