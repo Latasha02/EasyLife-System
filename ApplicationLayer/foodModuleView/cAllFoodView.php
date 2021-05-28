@@ -59,7 +59,7 @@ if (isset($_POST['addToCart'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><?php echo $customerID?> Customer</a>   
+            <a class="nav-link" href="#">Customer</a>   
           </li>    
           <li class="nav-item">
             <a class="nav-link" href="../login register/loginView.php">Logout</a>      

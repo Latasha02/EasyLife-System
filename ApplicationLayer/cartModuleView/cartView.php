@@ -69,7 +69,7 @@ if(isset($_POST['delete'])){
             <a class="nav-link" href="../login register/loginView.php">Logout</a>      
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cartView.php"> <?php echo $customerID ?> Cart</a>
+            <a class="nav-link" href="cartView.php"> Cart</a>
           </li>
 
         </ul>
