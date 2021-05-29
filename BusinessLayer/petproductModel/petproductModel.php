@@ -1,5 +1,5 @@
 <?php
-require_once '/xampp/htdocs/sdw/libs/database.php';
+require_once '/xampp/htdocs/SEM-group-5/libs/database.php';
 
 class petproductModel{ 
     public $petproductID,  $petproductName, $petproductPrice, $petproductType, $petproductDetail, $petproductQuantity, $petproductPic, $productName, $productPrice, $productQuantity, $customerID;
