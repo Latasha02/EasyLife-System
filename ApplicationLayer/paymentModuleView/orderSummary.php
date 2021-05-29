@@ -1,22 +1,35 @@
 <?php
  require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/paymentController/paymentController.php';
- //require_once '/xampp/htdocs/sdw/BusinessLayer/paymentController/paypalButton.php';
+//  require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/paymentController/paypalButton.php';
  require_once '/xampp/htdocs/SEM-group-5/libs/config.php';
 
  $payment = new paymentController();
  $data = $payment->viewDetails();
+ $error_message = "";
  session_start();
  if(isset($_POST['add'])){
   $payment = $_POST['paymentMethod'];
   
-  $_SESSION['item_name'] = $_POST['item_name'];
-  $_SESSION['item_number'] = $_POST['item_number'];
-  $_SESSION['total'] = $_POST['amount'] + 4.5;
+  $item_name = $_POST['item_name'];
+  $item_number = $_POST['item_number'];
+  $total = (float) $_POST['amount'] + 4.5;
+  
   if($payment == 'paypal'){
-        header("Location: ../../libs/paypal/charge.php");
+     if(empty($_POST['item_name']) || empty($_POST['item_number']) || empty($_POST['amount'])) {
+     $error_message = "Invalid cart details. Please check your cart details and try again.";
     }
+    if(!$total){
+      $error_message = "Invalid amount details. Please check your cart details and try again.";
+    }
+    $_SESSION['item_name'] = $item_name;
+    $_SESSION['item_number'] = $item_number;
+    $_SESSION['total'] = $total;
+    
+    header("Location: ../../libs/paypal/charge.php");
+ } 
+    
+ 
  }
-
 ?>
 
 <!DOCTYPE html>
@@ -104,7 +117,8 @@
           </div>
         </div>
                   <br></br>
-                  <h1>Details</h1><br>
+                  <h1>Details </h1><br>
+                  <?php if(!empty($error_message)) { echo $error_message;} ?>
         <div class="row">
           <table class="table table-striped table-bordered table-hover" id="foodTable">
       <thead>
@@ -170,9 +184,10 @@
         
 
         <!--Display the payment button--> 
-        <td><button name="add" class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button><input type="hidden" name="paymentMethod" value="paypal"></td>
-        <!-- <td><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></td> -->
+        <td><button class="btn"type="submit" name="add">
+        <img src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"  alt="PayPal - The safer, easier way to pay online!"/>
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+        </button><input type="hidden" name="paymentMethod" value="paypal"/></td>
         </form>
         </tr>
         

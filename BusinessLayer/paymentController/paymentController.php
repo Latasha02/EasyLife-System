@@ -13,6 +13,7 @@ function getInvoiceDetail($paymentID) {
     return $payment->getPaymentInvoice($paymentID);
 }
 
+
  function paypalCheck($OrderID, $productNameID, $productPrice, $productQuantity){
 
         $ch = curl_init();
