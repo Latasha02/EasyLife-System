@@ -16,6 +16,6 @@ if(!empty($_GET['OrderID']) && !empty($_GET['productName']) && !empty($_GET['pro
 }
 else{
     
-    header('Location:Location:ApplicationLayer/foodModuleView/allFoodView.php'); // Fail
+    //header('Location:Location:ApplicationLayer/foodModuleView/allFoodView.php'); // Fail
 }
 ?>

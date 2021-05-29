@@ -1,5 +1,5 @@
 <?php
-	require_once '/xampp/htdocs/sdw/BusinessLayer/loginRegisterModel/loginRegisterModel.php';
+	require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/loginRegisterModel/loginRegisterModel.php';
 
 	class LoginRegisterController{
 

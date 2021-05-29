@@ -4,8 +4,9 @@
 		session_destroy();
 		unset($_SESSION['customerEmail']);
 		header('location:loginView.php');
-
 	}
+  session_start();
+  $customerID=$_GET["customerID"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +21,10 @@
   <title></title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/sdw/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/SEM-group-5/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/sdw/css/shop-homepage.css" rel="stylesheet">
+  <link href="/SEM-group-5/css/shop-homepage.css" rel="stylesheet">
 
 </head>
 
@@ -84,7 +85,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../foodModuleView/cAllFoodView.php"><img class="card-img-top" src="/sdw/food.png" alt=""></a>
+              <a href="../foodModuleView/cAllFoodView.php"><img class="card-img-top" src="/SEM-group-5/food.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../foodModuleView/cAllFoodView.php?customerID="><br></br>Food Module</a>
@@ -98,7 +99,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../goodsModuleView/cAllGoodsView.php"><img class="card-img-top" src="/sdw/goods.png" alt=""></a>
+              <a href="../goodsModuleView/cAllGoodsView.php"><img class="card-img-top" src="/SEM-group-5/goods.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../goodsModuleView/cAllGoodsView.php?customerID="><br></br>Goods Module</a>
@@ -112,7 +113,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../pharmacyModuleView/cpharmacyproductView.php"><img class="card-img-top" src="/sdw/medicine.png" alt=""></a>
+              <a href="../pharmacyModuleView/cpharmacyproductView.php"><img class="card-img-top" src="/SEM-group-5/medicine.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../pharmacyModuleView/cpharmacyproductView.php"><br></br>Pharmacy Module</a>
@@ -126,7 +127,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../petproductModuleView/cAllpetproductView.php"><img class="card-img-top" src=/sdw/pet.png alt=""></a>
+              <a href="../petproductModuleView/cAllpetproductView.php"><img class="card-img-top" src=/SEM-group-5/pet.png alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../petproductModuleView/cAllpetproductView.php">Pet Module</a>
@@ -140,7 +141,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../TrackingAndAnalyticView/custSearchTracking.php"><img class="card-img-top" src=/sdw/tracking.png alt=""></a>
+              <a href="../TrackingAndAnalyticView/custSearchTracking.php"><img class="card-img-top" src=/SEM-group-5/tracking.png alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../TrackingAndAnalyticView/custSearchTracking.php">Tracking Module</a>

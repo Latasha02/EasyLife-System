@@ -18,10 +18,10 @@
   <title></title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/sdw/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/SEM-group-5/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/sdw/css/shop-homepage.css" rel="stylesheet">
+  <link href="/SEM-group-5/css/shop-homepage.css" rel="stylesheet">
 
 </head>
 
@@ -81,7 +81,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../foodModuleView/allFoodView.php"><img class="card-img-top" src="/sdw/food.png" alt=""></a>
+              <a href="../foodModuleView/allFoodView.php"><img class="card-img-top" src="/SEM-group-5/food.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../foodModuleView/allFoodView.php"><br></br>Food Module</a>
@@ -95,7 +95,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../goodsModuleView/allGoodsView.php"><img class="card-img-top" src="/sdw/goods.png" alt=""></a>
+              <a href="../goodsModuleView/allGoodsView.php"><img class="card-img-top" src="/SEM-group-5/goods.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../goodsModuleView/allGoodsView.php"><br></br>Goods Module</a>
@@ -109,7 +109,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../foodModuleView/allMedicineView.php"><img class="card-img-top" src="/sdw/medicine.png" alt=""></a>
+              <a href="../foodModuleView/allMedicineView.php"><img class="card-img-top" src="/SEM-group-5/medicine.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><br></br>Pharmacy Module</a>
@@ -123,7 +123,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../petproductModuleView/allpetproductView.php"><img class="card-img-top" src=/sdw/pet.png alt=""></a>
+              <a href="../petproductModuleView/allpetproductView.php"><img class="card-img-top" src=/SEM-group-5/pet.png alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../petproductModuleView/allpetproductView.php">Pet Module</a>
@@ -137,7 +137,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../TrackingAndAnalyticView/serProAnalytic.php"><img class="card-img-top" src=/sdw/tracking.png alt=""></a>
+              <a href="../TrackingAndAnalyticView/serProAnalytic.php"><img class="card-img-top" src=/SEM-group-5/tracking.png alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="../TrackingAndAnalyticView/serProAnalytic.php">Tracking Module</a>

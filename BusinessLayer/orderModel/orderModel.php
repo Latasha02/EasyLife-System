@@ -1,5 +1,5 @@
 <?php 
-require_once '/xampp/htdocs/sdw/libs/database.php';
+require_once '/xampp/htdocs/SEM-group-5/libs/database.php';
 
 class orderModel{
     public $productName, $productPrice, $productQuantity, $customerID, $name, $phoneNo, $address, $status;
@@ -19,8 +19,10 @@ function connect()
     }
 
     function cartView(){
-        $sql = "select * from cart";
-        return DB::run($sql);
+        $sql = "select * from cart where customerID=:customerID";
+        $args = [':customerID'=>$this->customerID];
+        $stmt = DB::run($sql, $args);
+        return $stmt;
     }
 
     function deleteProduct(){

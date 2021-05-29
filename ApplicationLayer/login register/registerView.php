@@ -1,5 +1,5 @@
 <?php
-	require_once '/xampp/htdocs/sdw/BusinessLayer/loginRegisterController/loginRegisterController.php';
+	require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/loginRegisterController/loginRegisterController.php';
 
 	$user = new LoginRegisterController();
 
@@ -22,7 +22,7 @@
 <!DOCTYPE html> 
 <html>
 	<head>
-		<link href="/sdw/style.css" rel="stylesheet" id="bootstrap-css">
+		<link href="/SEM-group-5/style.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<meta charset="utf=8">

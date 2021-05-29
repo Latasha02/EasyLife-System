@@ -1,5 +1,6 @@
 <?php 
-require_once '\xampp\htdocs\sdw\BusinessLayer\orderModel\orderModel.php';
+require_once '\xampp\htdocs\SEM-group-5\BusinessLayer\orderModel\orderModel.php';
+
 
 class orderController{ 
     
@@ -16,8 +17,9 @@ function update($productTotalPrice){
         }
     }
 
-function viewCart(){
+function viewCart($customerID){
         $product = new orderModel();
+        $product->customerID = $customerID;
         return $product->cartView();
     }
 

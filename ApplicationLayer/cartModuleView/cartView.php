@@ -1,9 +1,12 @@
 <?php
 
-require_once '/xampp/htdocs/sdw/BusinessLayer/orderController/orderController.php';
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/orderController/orderController.php';
+
+session_start();
+$customerID = $_SESSION['customerID'];
 
 $product = new orderController();
-$data = $product->viewCart();
+$data = $product->viewCart($customerID);
 
 if(isset($_POST['updateCart'])){
   $price=$_POST['productPrice'];
@@ -32,10 +35,10 @@ if(isset($_POST['delete'])){
   <title></title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/sdw/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/SEM-group-5/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/sdw/css/shop-homepage.css" rel="stylesheet">
+  <link href="/SEM-group-5/css/shop-homepage.css" rel="stylesheet">
   
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -66,7 +69,7 @@ if(isset($_POST['delete'])){
             <a class="nav-link" href="../login register/loginView.php">Logout</a>      
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cartView.php">Cart</a>
+            <a class="nav-link" href="cartView.php"> Cart</a>
           </li>
 
         </ul>
