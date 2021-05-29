@@ -1,5 +1,6 @@
 <?php 
 require_once '\xampp\htdocs\SEM-group-5\BusinessLayer\foodModel\foodModel.php';
+echo ok;
 
 class foodController{
     
