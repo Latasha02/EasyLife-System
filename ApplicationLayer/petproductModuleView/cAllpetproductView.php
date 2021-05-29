@@ -108,10 +108,10 @@ if (isset($_POST['addToCart'])) {
       <thead>
       <tr>
         <th>Picture</th>
-        <th>petproduct Name</th>
-        <th>petproduct Price</th>
-        <th>petproduct Details</th>
-        <th>petproduct Quantity</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Details</th>
+        <th>Quantity</th>
         <th>Action</th>
       </tr>
       </thead>
