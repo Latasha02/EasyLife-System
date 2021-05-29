@@ -38,6 +38,16 @@ $data = $paypalCheck;
   #invoice-details div span{
       width: 120px;
   }
+
+  .total {
+     height:50px;
+     margin-top:30px;
+     border-top:2px solid black;
+     border-bottom:2px solid black;
+     display:flex;
+     align-items: center;
+     justify-content:flex-end;
+  }
  
   </style>
 
@@ -103,17 +113,34 @@ $data = $paypalCheck;
           </div>
         </div>
         <br><br>
-        <h1>Invoice</h1><br>
-        <h4>YOUR PAYMENT SUCCESS</h2>
+        <div class="container">
+            <div class="card">
+            <div class="card-header">
+            Invoice
+            <strong><?php echo $data[0]["payment_id"]?></strong> 
+            <span class="float-right"> <strong>Status:</strong> Success</span>
+
+            </div>
+            <div class="card-body">
+            <div class="row mb-4">
+            <div class="col-sm-6">
+            <h6 class="mb-3">Order id : <?php echo $data[0]["orderID"];?></h6>
+            <div>
+            </div>
+            </div>
+            </div>
+            <hr>
+            <div>
+               <span><?php echo $data[0]["productName"]?></span>
+               <span class="float-right"><?php echo "RM" . $data[0]["Total"]?></span> 
+            </div>
+            <div class="total">
+               <span class="float-right" style="width:100px;"><strong>Total</strong></span>
+               <span class="float-right"><?php echo "RM" . $data[0]["Total"]?></span>
+               
+            </div>
         <br>
-        <div id="invoice-details">
-        <?php foreach ($data as $invoice) : ?>
-            <div><span>ORDER ID :</span> <input type="text" value="<?php echo $invoice["orderID"]?>" /></div>
-            <div><span>Product Name :</span> <input type="text" value="<?php echo $invoice["productName"]?>" /></div>
-            <div><span>Total Payment :</span> <input type="text" value="<?php echo $invoice["Total"]?>" /></div>
-        </div>
-        <?php endforeach; ?>
-      </div>
+        
       <!-- /.col-lg-9 -->
 
     </div>
@@ -122,14 +149,6 @@ $data = $paypalCheck;
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br>
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Keep It Simple &copy; Group 5</p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
