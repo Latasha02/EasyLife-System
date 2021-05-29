@@ -1,6 +1,6 @@
 <?php
-require_once '/xampp/htdocs/sdw/libs/config.php';
-require_once '/xampp/htdocs/sdw/BusinessLayer/paymentController/paymentController.php';
+require_once '/xampp/htdocs/SEM-group-5/libs/config.php';
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/paymentController/paymentController.php';
 
 if(!empty($_GET['OrderID']) && !empty($_GET['productName']) && !empty($_GET['productPrice']) && !empty($_GET['productQuantity']) ){
     $payment = new paymentController();
