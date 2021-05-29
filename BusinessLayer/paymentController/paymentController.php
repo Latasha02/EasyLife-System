@@ -8,6 +8,11 @@ function viewDetails(){
         return $payment->viewallDetails();
     }
 
+function getInvoiceDetail() {
+    $payment = new paymentModel();
+    return $payment->getPaymentInvoice("PAYID-MCJ4J4Y86F59198UF987712U");
+}
+
  function paypalCheck($OrderID, $productNameID, $productPrice, $productQuantity){
 
         $ch = curl_init();
