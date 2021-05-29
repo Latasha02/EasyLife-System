@@ -8,9 +8,9 @@ function viewDetails(){
         return $payment->viewallDetails();
     }
 
-function getInvoiceDetail() {
+function getInvoiceDetail($paymentID) {
     $payment = new paymentModel();
-    return $payment->getPaymentInvoice("PAYID-MCJ4J4Y86F59198UF987712U");
+    return $payment->getPaymentInvoice($paymentID);
 }
 
  function paypalCheck($OrderID, $productNameID, $productPrice, $productQuantity){

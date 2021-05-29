@@ -27,6 +27,7 @@ if (array_key_exists('paymentId', $_GET) && array_key_exists('PayerID', $_GET)) 
         unset($_SESSION['item_name']);
         unset($_SESSION['item_number']);
         unset($_SESSION['total']);
+        $_SESSION['paymentID'] = $payment_id;
        header('Location: ../../ApplicationLayer/paymentModuleView/paymentInvoice.php');
     } else {
         echo $response->getMessage();

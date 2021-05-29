@@ -1,9 +1,10 @@
 <?php
 // require 'config.php';
 require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/paymentController/paymentController.php';
-
+session_start();
+$paymentID = $_SESSION["paymentID"];
 $payment = new paymentController();
-$paypalCheck = $payment->getInvoiceDetail();
+$paypalCheck = $payment->getInvoiceDetail($paymentID);
 $data = $paypalCheck;
 
 ?>
