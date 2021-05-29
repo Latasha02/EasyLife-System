@@ -15,17 +15,16 @@
   $total = (float) $_POST['amount'] + 4.5;
   
   if($payment == 'paypal'){
-     if(empty($_POST['item_name']) || empty($_POST['item_number']) || empty($_POST['amount'])) {
+     if(empty($item_name) || empty($item_number) || empty($total) || !$total) {
      $error_message = "Invalid cart details. Please check your cart details and try again.";
-    }
-    if(!$total){
-      $error_message = "Invalid amount details. Please check your cart details and try again.";
-    }
+    } 
+    else {
     $_SESSION['item_name'] = $item_name;
     $_SESSION['item_number'] = $item_number;
     $_SESSION['total'] = $total;
     
     header("Location: ../../libs/paypal/charge.php");
+    }
  } 
     
  
@@ -118,7 +117,11 @@
         </div>
                   <br></br>
                   <h1>Details </h1><br>
-                  <?php if(!empty($error_message)) { echo $error_message;} ?>
+                  <?php if(!empty($error_message)) {
+                    echo "<div class='alert alert-danger' role='alert'>
+                    " . $error_message . "
+                  </div>";
+                    } ?>
         <div class="row">
           <table class="table table-striped table-bordered table-hover" id="foodTable">
       <thead>
