@@ -137,7 +137,7 @@ if (isset($_POST['addToCart'])) {
             
 
           <td><form action="" method="POST">
-            <input type="number" name="productQuantity" value="1" required max="<?= $row['petproductQuantity']?>" min="0" >
+            <input type="number" name="productQuantity" value="1" required max="<?= $row['petproductQuantity']?>" min="1" >
             <input type="hidden" name="productName" value="<?=$row['petproductName']?>">
             <input type="hidden" name="productPrice" value="<?=$row['petproductPrice']?>">
             <input type="hidden" name="customerID" value="<?php echo $customerID?>">     
