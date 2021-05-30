@@ -1,17 +1,3 @@
-<?php
-  
-  require_once '/xampp/htdocs/sdw/BusinessLayer/TrackingAndAnalyticC/Tracking&AnalyticC.php';
-
-      $trackingID = $_POST['search'];
-
-      $tracking = new trackingAnalyticController();
-
-      $data = $tracking->view($trackingID);
-
-      $search = $tracking->search($trackingID);
-    
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tracking Status - Customer</title>
+  <title>Track My Order - Customer</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,58 +16,9 @@
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
 
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    table, th, td{
-      border: 1px solid black;
-    }
-
-    th, td{
-      text-align: center;
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-
-    th{
-      background-color: gainsboro;
-    }
-  </style>
-
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Keep It Simple</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -120,58 +57,83 @@
 
         <h1 class="my-4">Tracking Department</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Food Department</a>
-          <a href="#" class="list-group-item">Goods Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine Department</a>
-          <br>
+          <a href="http://localhost/sdw/ApplicationLayer/foodModuleView/cAllFoodView.php?customerID=" class="list-group-item">Food Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/goodsModuleView/cAllGoodsView.php?customerID=" class="list-group-item">Goods Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine Department</a>
         </div>
 
       </div>
       <!-- /.col-lg-3 -->
 
       <div class="col-lg-9">
-      <br>
-      <form action = "custSearchTracking.php" method = "POST" enctype = "multipart/form-data" style = "margin-left: auto; margin-right: auto">
 
-        <h2 style = "text-align: center"><b>TRACKING STATUS</b></h2>
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
-        <?php
-          $i = 1;
-          foreach($data as $row){
-        ?>
+      </div>
+      <!-- /.col-lg-9 -->
 
-        <h5 style = "text-align: center; color:blue"><b>TRACKING ID : <?=$row['trackingID']?></b></h5>
-
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-9">
+      <form action = "custViewTracking.php" method = "POST" enctype = "multipart/form-data" style = "margin-left: auto; margin-right: auto">
+           
+          <fieldset style = "border: solid black 1px; padding: 5px 100px">
             <table align = "center">
               <tr>
-                <th>DATE</th>
-                <th>STATUS</th>
-                <th>REMARKS</th>
+                <th style = "text-align: center; font-size: 30px">TRACKING ID</th>
               </tr>
 
               <tr>
-                <td><?=$row['date']?></td>
-                <td style = "color: red"><?=$row['trackStatus']?></td>
-                <td><?=$row['trackRemarks']?></td>
+                <td style = "padding-bottom: 1em; text-align: center; color:grey"><small>Please enter a valid tracking ID.</small></td>
               </tr>
 
-              <?php 
-                $i++; } 
-              ?>
+              <tr>
+                <td style = "padding-bottom: 1em"><input type = "text" name = "search" style = "color:dimgrey; text-align: center"></td>
+              </tr>
 
+              <tr>
+                <td style = "padding-bottom: 1em; text-align: center">
+                  <button class = "btn btn-info" name = "searchTrackID">
+                    <i class ="fas fa-check"> Submit </i>
+                  </button>
+                </td>
+              </tr>
             </table>
-
-            <br>
-
-            <button class="btn btn-danger" name="back" onclick="location.href='/opt/lampp/htdocs/sdw/ApplicationLayer/TrackingAndAnalyticView/custSearchTracking.php?trackingID=<?=$row['trackingID']?>'">Back</button>  
-
+          </fieldset>
+          <br>
       </form>
-      
-      <br>
-      </div>
+
+    </div>
+
     </div>
     <!-- /.row -->
+
   </div>
   <!-- /.container -->
 
