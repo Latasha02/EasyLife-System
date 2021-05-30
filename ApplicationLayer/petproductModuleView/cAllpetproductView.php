@@ -108,10 +108,10 @@ if (isset($_POST['addToCart'])) {
       <thead>
       <tr>
         <th>Picture</th>
-        <th>petproduct Name</th>
-        <th>petproduct Price</th>
-        <th>petproduct Details</th>
-        <th>petproduct Quantity</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Details</th>
+        <th>Quantity</th>
         <th>Action</th>
       </tr>
       </thead>
@@ -124,7 +124,9 @@ if (isset($_POST['addToCart'])) {
           <form action="" method="POST">
           <tr>
             <td rowspan="1">
+            
                 <?php
+                
                 $image=$row['petproductPic'];
                 echo '<span style="border: 1px solid black; display: inline-block"><input type ="image" img id="placeImage" img src="uploadimage/'.$image.'" height="100" width="100"></span>';
                 ?></td>
@@ -132,8 +134,10 @@ if (isset($_POST['addToCart'])) {
             <td>RM<?=$row['petproductPrice']?></td>
             <td><?=$row['petproductDetail']?></td>
             <td><?=$row['petproductQuantity']?></td>
+            
+
           <td><form action="" method="POST">
-            <input type="number" name="productQuantity" value="1">
+            <input type="number" name="productQuantity" value="1" required max="<?= $row['petproductQuantity']?>" min="0" >
             <input type="hidden" name="productName" value="<?=$row['petproductName']?>">
             <input type="hidden" name="productPrice" value="<?=$row['petproductPrice']?>">
             <input type="hidden" name="customerID" value="<?php echo $customerID?>">     
