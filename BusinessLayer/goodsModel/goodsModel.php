@@ -34,7 +34,7 @@ class goodsModel{
     function modifyProduct(){
        $sql = "update product set prodName=:prodName,prodType=:prodType,prodPrice=:prodPrice,prodDetail=:prodDetail,prodQuantity=:prodQuantity where productid=:productid";
         $args = [ ':productid'=>$this->productid,':prodName'=>$this->prodName,':prodType'=>$this->prodType,':prodPrice'=>$this->prodPrice,':prodDetail'=>$this->prodDetail,':prodQuantity'=>$this->prodQuantity];
-        return DB::run($sql,$args);
+        
     }
     
     function deleteProduct(){
@@ -44,13 +44,12 @@ class goodsModel{
     }
 
     function addToCart(){
-        $sql = "insert into cart(productName, productPrice, productQuantity, customerID) values(:productName, :productPrice, :productQuantity, :customerID)";
+       $sql = "insert into cart(productName, productPrice, productQuantity, customerID) values(:productName, :productPrice, :productQuantity, :customerID)";
         $args = [':productName'=>$this->productName, ':productPrice'=>$this->productPrice, ':productQuantity'=>$this->productQuantity, ':customerID'=>$this->customerID];
         $stmt = DB::run($sql, $args);
         $count = $stmt->rowCount();
         return $count;
     }
-
 
 }
 

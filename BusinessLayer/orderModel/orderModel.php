@@ -34,7 +34,6 @@ function connect()
     }
 
     function addInfo(){
-
         $sql="insert into custorder (name,phoneNo,address,orderStatus) values (:name, :phoneNo, :address, :status)";
         $args= [':name'=>$this->name, ':phoneNo'=>$this->phoneNo, ':address'=>$this->address, ':status'=>$this->status ];
         $stmt = DB::run($sql, $args);

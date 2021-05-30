@@ -2,14 +2,15 @@
 require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/orderController/orderController.php';
 
 $order = new orderController();
-$data = $order->viewCart();
-$customerID = $_GET['customerID'];
+session_start();
+$customerID = $_SESSION['customerID'];
+$data = $order->viewCart($customerID);
+
 
 
 if(isset($_POST['confirm'])){
     $order->confirm();
 }
-
 
 ?>
 
