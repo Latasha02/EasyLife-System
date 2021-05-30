@@ -1,5 +1,5 @@
 <?php
-require_once '/xampp/htdocs/sdw/BusinessLayer/paymentModel/paymentModel.php';
+require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/paymentModel/paymentModel.php';
 
 class paymentController{
 
@@ -7,6 +7,12 @@ function viewDetails(){
         $payment = new paymentModel();
         return $payment->viewallDetails();
     }
+
+function getInvoiceDetail($paymentID) {
+    $payment = new paymentModel();
+    return $payment->getPaymentInvoice($paymentID);
+}
+
 
  function paypalCheck($OrderID, $productNameID, $productPrice, $productQuantity){
 
