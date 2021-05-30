@@ -57,10 +57,10 @@
 
         <h1 class="my-4">Tracking Department</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Food Department</a>
-          <a href="#" class="list-group-item">Goods Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/foodModuleView/cAllFoodView.php?customerID=" class="list-group-item">Food Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/goodsModuleView/cAllGoodsView.php?customerID=" class="list-group-item">Goods Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="http://localhost/sdw/ApplicationLayer/pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine Department</a>
         </div>
 
       </div>
