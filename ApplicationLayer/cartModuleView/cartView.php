@@ -22,6 +22,8 @@ if(isset($_POST['delete'])){
 
 ?>
 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

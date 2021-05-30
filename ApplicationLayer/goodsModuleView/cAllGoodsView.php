@@ -15,7 +15,8 @@ if (isset($_POST['addToCart'])) {
   $price=$_POST['productPrice'];
   $amount=$_POST['productQuantity'];
   $productTotalPrice=$price*$amount;
-  $product->addToCart($productTotalPrice);}
+  $product->addToCart($productTotalPrice);
+}
 
 ?>
 

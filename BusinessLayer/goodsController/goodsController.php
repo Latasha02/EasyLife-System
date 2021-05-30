@@ -73,13 +73,13 @@ class goodsController{
         echo "<script type='text/javascript'>alert('$message');
         window.location = '../goodsModuleView/cAllGoodsView.php?customerID=$product->customerID';</script>";
         }
+
     }
 
     function viewAllProduct(){
         $product = new goodsModel();
         return $product->viewallProduct();
     }
-
      
 }
 ?>
