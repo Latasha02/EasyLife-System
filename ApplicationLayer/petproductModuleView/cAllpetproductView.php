@@ -1,9 +1,9 @@
 <?php
 require_once '/xampp/htdocs/SEM-group-5/BusinessLayer/petproductController/petproductController.php';
-
+session_start();
 $product = new petproductController();
 $data = $product->viewAllpetproduct();
-$customerID = $_GET['customerID'];
+$customerID = $_SESSION['customerID'];
 
 if(isset($_POST['delete'])){
     $petproduct->delete();
