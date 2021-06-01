@@ -88,7 +88,7 @@
               <a href="../foodModuleView/cAllFoodView.php"><img class="card-img-top" src="/SEM-group-5/food.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="../foodModuleView/cAllFoodView.php?customerID="><br></br>Food Module</a>
+                  <a href="../foodModuleView/cAllFoodView.php"><br></br>Food Module</a>
                 </h4>
               </div>
               <div class="card-footer">
