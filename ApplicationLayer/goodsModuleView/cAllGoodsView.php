@@ -80,9 +80,9 @@ if (isset($_POST['addToCart'])) {
         <br></br>
         <h1 class="my-4">Goods Department</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Food Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine</a>
+          <a href="../foodModuleView/cAllFoodView.php" class="list-group-item">Food Department</a>
+          <a href="../petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="../pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine</a>
         </div>
 
       </div>
