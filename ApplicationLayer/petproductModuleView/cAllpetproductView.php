@@ -110,7 +110,7 @@ if (isset($_POST['addToCart'])) {
         <th>Picture</th>
         <th>Name</th>
         <th>Price</th>
-        <th>Detail</th>
+        <th>Details</th>
         <th>Quantity</th>
         <th>Action</th>
       </tr>
