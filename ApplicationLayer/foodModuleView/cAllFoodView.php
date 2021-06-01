@@ -13,6 +13,7 @@ if(isset($_POST['delete'])){
 if (isset($_POST['addToCart'])) {
   $price=$_POST['productPrice'];
   $amount=$_POST['productQuantity'];
+  
   $productTotalPrice=$price*$amount;
   $product->addToCart($productTotalPrice);}
 
@@ -81,9 +82,9 @@ if (isset($_POST['addToCart'])) {
         <br></br>
         <h1 class="my-4">Food Department</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Goods Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine</a>
+          <a href="../goodsModuleView/cAllGoodsView.php" class="list-group-item" >Goods Department</a>
+          <a href="../petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="../pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine</a>
         </div>
 
       </div>
