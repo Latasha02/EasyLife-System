@@ -109,7 +109,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="../foodModuleView/allMedicineView.php"><img class="card-img-top" src="/SEM-group-5/medicine.png" alt=""></a>
+              <a href="../pharmacyModuleView/allMedicineView.php"><img class="card-img-top" src="/SEM-group-5/medicine.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><br></br>Pharmacy Module</a>
