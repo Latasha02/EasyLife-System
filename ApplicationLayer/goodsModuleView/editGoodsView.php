@@ -21,10 +21,10 @@ if(isset($_POST['update'])){
   <meta name="author" content="">
 
   <!-- Bootstrap core CSS -->
-  <link href="/SEM-group-5/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/sdw/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="/SEM-group-5/css/shop-homepage.css" rel="stylesheet">
+  <link href="/sdw/css/shop-homepage.css" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -68,12 +68,13 @@ if(isset($_POST['update'])){
     <div class="row">
 
       <div class="col-lg-3">
+        <br><br>
 
         <h1 class="my-4">Goods Department</h1>
         <div class="list-group">
-           <a href="../foodModuleView/allFoodView.php" class="list-group-item">Food Department</a>
-          <a href="../petproductModuleView/allpetproductView.php" class="list-group-item">Pets Department</a>
-          <a href="../pharmacyModuleView/allPharmacyproductView.php" class="list-group-item">Medicine Department</a>
+          <a href="#" class="list-group-item">Food Department</a>
+          <a href="#" class="list-group-item">Pets Department</a>
+          <a href="#" class="list-group-item">Medicine Department</a>
         </div>
 
       </div>
@@ -123,7 +124,7 @@ if(isset($_POST['update'])){
       <tr>
         <th>Product Type</th>
         <td>  
-          <select class="form-control" name="prodType"  id="foodType" required="required">
+          <select class="form-control" name="prodType"  id="prodType" required="required">
           <option VALUE="">-Choose Product Type-</option>
           <option value="Clothes" <?=$row['prodType']=="Clothes" ? "checked" : ""?>>Clothes</option>
           <option value="Household" <?=$row['prodType']=="Household" ? "checked" : ""?>>Household</option>

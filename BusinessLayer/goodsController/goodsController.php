@@ -35,7 +35,7 @@ class goodsController{
         return $product->viewProduct();
     }
     
-    function editProduct(){
+     function editProduct(){
         $product = new goodsModel();
         $product->productid =  $_POST['productid'];
         $product->prodName =  $_POST['prodName'];
