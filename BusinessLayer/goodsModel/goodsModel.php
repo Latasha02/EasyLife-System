@@ -34,7 +34,7 @@ class goodsModel{
     function modifyProduct(){
        $sql = "update product set prodName=:prodName,prodType=:prodType,prodPrice=:prodPrice,prodDetail=:prodDetail,prodQuantity=:prodQuantity where productid=:productid";
         $args = [ ':productid'=>$this->productid,':prodName'=>$this->prodName,':prodType'=>$this->prodType,':prodPrice'=>$this->prodPrice,':prodDetail'=>$this->prodDetail,':prodQuantity'=>$this->prodQuantity];
-        
+        return DB::run($sql,$args);
     }
     
     function deleteProduct(){
