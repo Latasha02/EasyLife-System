@@ -102,7 +102,7 @@
               <a href="../goodsModuleView/cAllGoodsView.php"><img class="card-img-top" src="/SEM-group-5/goods.png" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="../goodsModuleView/cAllGoodsView.php?customerID="><br></br>Goods Module</a>
+                  <a href="../goodsModuleView/cAllGoodsView.php"><br></br>Goods Module</a>
                 </h4>
             </div>
               <div class="card-footer">

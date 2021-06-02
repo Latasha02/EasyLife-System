@@ -113,11 +113,16 @@ if (isset($_POST['addToCart'])) {
         <th>Details</th>
         <th>Quantity</th>
         <th>Action</th>
+        <th>Total Price</th>
       </tr>
       </thead>
       <tbody>
+        
           <?php
             foreach($data as $row){
+              $a = uniqid();
+              $b = uniqid();
+              $c = uniqid();
               echo "<tr>";
           ?>
 
@@ -125,6 +130,7 @@ if (isset($_POST['addToCart'])) {
           <tr>
             <td rowspan="1">
                 <?php
+                $price = 1;
                 $image=$row['petproductPic'];
                 echo '<span style="border: 1px solid black; display: inline-block"><input type ="image" img id="placeImage" img src="uploadimage/'.$image.'" height="100" width="100"></span>';
                 ?></td>
@@ -133,17 +139,46 @@ if (isset($_POST['addToCart'])) {
             <td><?=$row['petproductDetail']?></td>
             <td><?=$row['petproductQuantity']?></td>
           <td><form action="" method="POST">
-            <input type="number" name="productQuantity" value="1" min="1" required max="<?= $row['petproductQuantity'] ?>" >
+
+            <input type="number" name="productQuantity" id='<?= $b ?>' value="1" min="1" required max="<?= $row['petproductQuantity'] ?>" <?php
+                             if ($row['petproductQuantity'] <= 0) {
+                                    echo "value=0 disabled ";
+                            } else {
+                                    echo "value= $row[petproductQuantity]  ";
+                             } ?> onChange="calculateRow('<?= $a ?>','<?= $b ?>','<?= $c ?>')" />
             <input type="hidden" name="productName" value="<?=$row['petproductName']?>">
-            <input type="hidden" name="productPrice" value="<?=$row['petproductPrice']?>">
+            <input type="hidden" name="productPrice" id='<?= $a ?>' value="<?=$row['petproductPrice']?>">
+            <!-- use for calculation: price -->
+            <input type="hidden"  value="<?= $row['petproductPrice'] ?>" />
             <input type="hidden" name="customerID" value="<?php echo $customerID?>">     
             <input type="submit" name="addToCart" value="Add To Cart">
-          </form></td>
+          </td></form>
+          <td> <!-- use for calculation: display --><?php
+                            if ($row['petproductQuantity'] == 0) {
+                                $price = 0;
+                            } else {
+                                $price = $row['petproductPrice'];
+                            } ?>
+                            <!-- use for calculation: item subtotal -->
+                            <p id='<?= $c ?>'>
+                            <?php echo "RM " . ($price ) ?></p></td>
+                            <?php
+                    }
+                    ?>
+                        <script>
+                        function calculateRow(petproductPrice, petproductQuantity, price) {
+                            var petproductPricev = document.getElementById(petproductPrice).value;
+                            var petproductQuantityv = document.getElementById(petproductQuantity).value;
+                            var pricev = parseFloat(petproductQuantityv) * parseFloat(petproductPricev);
+                            document.getElementById(price).innerHTML = "RM " + pricev;
+                        };
+                  </script>
                    </form>
                 <?php
                   echo "</tr>";
-                  }
+                  
                 ?>
+
           <table>
             <input type="button" class="btn btn-primary" onclick="location.href='../login register/cHomepageView.php'" value="Back"></td>
           </table>
@@ -180,6 +215,8 @@ if (isset($_POST['addToCart'])) {
     $('#petproductTable').DataTable();
   } );
 </script>
+
+
 
 </body>
 

@@ -78,8 +78,8 @@ if(isset($_POST['delete'])){
         <h1 class="my-4">Goods Department</h1>
         <div class="list-group">
           <a href="../foodModuleView/allFoodView.php" class="list-group-item">Food Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine Department</a>
+          <a href="../petproductModuleView/allpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="../pharmacyModuleView/allPharmacyproductView.php" class="list-group-item">Medicine Department</a>
         </div>
 
       </div>
