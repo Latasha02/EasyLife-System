@@ -67,9 +67,10 @@ $foodData = $food->viewFood($foodID);
         <br></br>
         <h1 class="my-4">Food Department</h1>
         <div class="list-group">
-          <a href="../foodModuleView/allGoodsView.php" class="list-group-item">Goods Department</a>
-          <a href="#" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine Department</a>
+          <a href="../foodModuleView/cAllFoodView.php" class="list-group-item">Food Department</a>
+          <a href="../goodsModuleView/cAllGoodsView.php" class="list-group-item">Goods Department</a>
+          <a href="../petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
+          <a href="../pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine Department</a>
         </div>
 
       </div>
@@ -90,20 +91,13 @@ $foodData = $food->viewFood($foodID);
 
       <br></br>
               <br>
-<?php 
-          if(!empty($_SESSION["shopping_cart"])) {
-          $cart_count = count(array_keys($_SESSION["shopping_cart"]));
-          echo $cart_count;} ?>
 
-        <div class='product_wrapper'>
-        <?php
-
-            foreach($foodData as $row){
-              echo "<form method='POST' action=''>
-              <tr>";
-        ?>
         <h2 style='color: #006699'>Food Details</h2>
         <table class='table table-striped table-bordered table-hover' id='foodTable'>
+  <?php
+    foreach($foodData as $row){
+   
+  ?>
 
             <thead>
             <tr>
@@ -137,23 +131,11 @@ $foodData = $food->viewFood($foodID);
             </tbody>
             </tr>
         </table>
-      </form>
       <?php
       echo "</tr>";
+    }
       ?>
-
-      <table>
-        <td>
-          <input type="button" class="btn btn-primary" onclick="location.href='editFoodView.php?foodID=<?=$row['foodID']?>'" value="EDIT">
-          <input type="hidden" name="foodID" value="<?=$row['foodID']?>">
-          <input type="button" class="btn btn-primary" onclick="location.href='allFoodView.php'" value="Back">
-        </td>
-      </table>
-
-      <?php
-      }
-      ?>
-
+  
 <div style="clear:both;"></div>
  
 <div class="message_box" style="margin:10px 0px;">

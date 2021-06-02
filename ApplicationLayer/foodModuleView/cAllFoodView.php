@@ -114,6 +114,7 @@ if (isset($_POST['addToCart'])) {
         <th>Food Price</th>
         <th>Food Details</th>
         <th>Food Quantity</th>
+        <th>View</th>
         <th>Action</th>
       </tr>
       </thead>
@@ -134,6 +135,9 @@ if (isset($_POST['addToCart'])) {
             <td>RM<?=$row['foodPrice']?></td>
             <td><?=$row['foodDetail']?></td>
             <td><?=$row['foodQuantity']?></td>
+            <td><button> <a href="../foodModuleView/foodView.php?foodID=<?=$row['foodID'];?>">VIEW</a></button></td>
+            
+
           <td><form action="" method="POST">
             <input type="number" name="productQuantity" value="1">
             <input type="hidden" name="productName" value="<?=$row['foodName']?>">
