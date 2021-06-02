@@ -125,10 +125,9 @@ if(isset($_POST['update'])){
       <tr>
         <th>Food Type</th>
         <td>  
-          <select class="form-control" name="foodType"  id="foodType" required="required">
-          <option VALUE="">-Choose Food Type-</option>
-          <option value="Clothes" <?=$row['foodType']=="Dry food" ? "checked" : ""?>>Dry food</option>
-          <option value="Household" <?=$row['foodType']=="Wet food" ? "checked" : ""?>>Wet food</option>
+          <select class="form-control" name="foodType"  value="<?=$row['foodType']?>"  required="required">
+          <option value="Dry food">Dry food</option>
+          <option value="Wet food">Wet food</option>
           </select>
         </td>
       </tr>
