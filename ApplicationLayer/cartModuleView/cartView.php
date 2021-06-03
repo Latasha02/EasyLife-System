@@ -88,10 +88,10 @@ if(isset($_POST['delete'])){
         <br></br><br></br><br></br><br></br>
         
         <div class="list-group">
-          <a href="#" class="list-group-item">Food Department</a>
-          <a href="#" class="list-group-item">Goods Department</a>
+          <a href="../foodModuleView/cAllFoodView.php" class="list-group-item">Food Department</a>
+          <a href="../goodsModuleView/cAllGoodsView.php" class="list-group-item">Goods Department</a>
           <a href="../petproductModuleView/cAllpetproductView.php" class="list-group-item">Pets Department</a>
-          <a href="#" class="list-group-item">Medicine</a>
+          <a href="../pharmacyModuleView/cpharmacyproductView.php" class="list-group-item">Medicine</a>
         </div>
 
       </div>
@@ -148,7 +148,7 @@ if(isset($_POST['delete'])){
                   }
                 ?>
           <table>      
-            <input type="button" class="btn btn-primary" onclick="location.href='../login register/cHomepageView.php?'" value="Back"></td>
+            <input type="button" class="btn btn-primary" onclick="location.href='../login register/cHomepageView.php?customerID=<?=$customerID;?>'" value="Back"></td>
             <input type="button" class="btn btn-primary" onclick="location.href='orderView.php'" value="Place Order"></td>
           </table>
         </tbody>

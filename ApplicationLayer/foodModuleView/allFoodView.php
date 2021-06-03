@@ -118,7 +118,7 @@ if(isset($_POST['delete'])){
                 $image=$row['foodPic'];
                 echo '<span style="border: 1px solid black; display: inline-block"><input type ="image" img id="placeImage" img src="uploadimage/'.$image.'" height="100" width="100"></span>';
                 ?></td>
-            <td><a href="foodView.php?foodID=<?=$row['foodID']?>"><?=$row['foodName']?></a></td>
+            <td><?=$row['foodName']?></a></td>
             <td>RM<?=$row['foodPrice']?></td>
             <td><?=$row['foodDetail']?></td>
             <td><?=$row['foodQuantity']?></td>
