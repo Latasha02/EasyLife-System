@@ -121,7 +121,7 @@ if (isset($_POST['addToCart'])) {
               echo "<tr>";
           ?>
 
-          <form action="../goodsModuleView/goodsView.php" method="POST">
+          <form action="" method="POST">
           <tr>
             <td rowspan="1">
                 <?php
