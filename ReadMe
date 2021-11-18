@@ -1,0 +1,6 @@
+Download sdw.zip file
+Extract sdw file in This Pc>> xampp>> htcdocs
+open XAMPP Control Panel  application and start Apche and MySQL
+create a new table in phpMyAdmin, name it sdw
+Import sdw.sql file from sdw file in htdocs
+open a new tab in browser and type this link "http://localhost/SDW/index.php"
